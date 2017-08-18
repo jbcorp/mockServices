@@ -1,11 +1,11 @@
 package com.mock.mockServices.controller;
 
 
+import com.mock.mockServices.services.RequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.mock.mockServices.services.RequestService;
 
 /**
  * Created by bhati502 on 9-5-2017.
