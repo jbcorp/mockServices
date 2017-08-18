@@ -1,13 +1,11 @@
 package com.mock.mockServices.controller;
 
 
-import com.mock.mockServices.services.GetCustomerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import com.mock.mockServices.services.RequestService;
 
 /**
  * Created by bhati502 on 9-5-2017.
@@ -15,6 +13,8 @@ import java.util.List;
 @RestController
 public class RequestController {
 
+    @Autowired
+    RequestService requestService;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String testMethod() {
@@ -23,106 +23,104 @@ public class RequestController {
 
     @RequestMapping(value = "/GetCustomerInformation", method = RequestMethod.POST)
     public String GetCustomerInformation() {
-        return GetCustomerDetailsService.returnResponse();
+        return requestService.getCustomerDetailsResponse();
     }
 
     @RequestMapping(value = "/GetInstalledBase", method = RequestMethod.POST)
     public String GetInstalledBase() {
-        return "HELLO......";
+        return requestService.getInstalledBaseResponse();
     }
 
     @RequestMapping(value = "/GetTechnicalInstalledBase", method = RequestMethod.POST)
     public String GetTechnicalInstalledBase() {
-        return "HELLO......";
+        return requestService.getTechnicalInstalledBaseResponse();
     }
 
     @RequestMapping(value = "/PrequalOrderIntakeNew", method = RequestMethod.POST)
     public String PrequalOrderIntakeNew() {
-        return "HELLO......";
+        return requestService.getPrequalOrderIntakeNewResponse();
     }
 
     @RequestMapping(value = "/VASAvailability", method = RequestMethod.POST)
     public String VASAvailability() {
-        return "HELLO......";
+        return requestService.getVASAvailabilityResponse();
     }
 
     @RequestMapping(value = "/PackageAvailability", method = RequestMethod.POST)
     public String PackageAvailability() {
-        return "HELLO......";
+        return requestService.getPackageAvailabilityResponse();
     }
 
     @RequestMapping(value = "/AccessOrderSecenario", method = RequestMethod.POST)
     public String AccessOrderSecenario() {
-        return "HELLO......";
+        return requestService.getAccessOrderSecenarioResponse();
     }
 
     @RequestMapping(value = "/HardWareStatus", method = RequestMethod.POST)
     public String HardWareStatus() {
-        return "HELLO......";
+        return requestService.getHardWareStatusResponse();
     }
 
     @RequestMapping(value = "/UpdatePrivacy", method = RequestMethod.POST)
     public String UpdatePrivacy() {
-        return "HELLO......";
+        return requestService.getUpdatePrivacyResponse();
     }
 
     @RequestMapping(value = "/GetFirstPossibleWishdate", method = RequestMethod.POST)
     public String GetFirstPossibleWishdate() {
-        return "HELLO......";
+        return requestService.getFirstPossibleWishdateResponse();
     }
 
     @RequestMapping(value = "/SimplePrequalify", method = RequestMethod.POST)
     public String SimplePrequalify() {
-        return "HELLO......";
+        return requestService.getSimplePrequalifyResponse();
     }
 
     @RequestMapping(value = "/ValidateTelephoneNumber", method = RequestMethod.POST)
-    public String ValidateTelephoneNumber() {
-        return "HELLO......";
-    }
+    public String ValidateTelephoneNumber() { return requestService.getValidateTelephoneNumberResponse(); }
 
     @RequestMapping(value = "/GetInitialOrderDuplicateVoip", method = RequestMethod.POST)
     public String GetInitialOrderDuplicateVoip() {
-        return "HELLO......";
+        return requestService.getInitialOrderDuplicateVoipResponse();
     }
 
     @RequestMapping(value = "/SearchCustomer", method = RequestMethod.POST)
     public String SearchCustomer() {
-        return "HELLO......";
+        return requestService.getSearchCustomerResponse();
     }
 
     @RequestMapping(value = "/GetInitialOrderCustomerDetails", method = RequestMethod.POST)
     public String GetInitialOrderCustomerDetails() {
-        return "HELLO......";
+        return requestService.getCustomerDetailsResponse();
     }
 
     @RequestMapping(value = "/GetInitialOrderEmailValidation", method = RequestMethod.POST)
     public String GetInitialOrderEmailValidation() {
-        return "HELLO......";
+        return requestService.getValidateEmailResponse();
     }
 
     @RequestMapping(value = "/GetInitialOrderTelephoneValidation", method = RequestMethod.POST)
     public String GetInitialOrderTelephoneValidation() {
-        return "HELLO......";
+        return requestService.getValidateTelephoneNumberResponse();
     }
 
     @RequestMapping(value = "/GetInitialOrderSaveOrderDetails", method = RequestMethod.POST)
     public String GetInitialOrderSaveOrderDetails() {
-        return "HELLO......";
+        return requestService.saveOrderResponse();
     }
 
     @RequestMapping(value = "/GetAvailablePlanDates", method = RequestMethod.POST)
     public String GetAvailablePlanDates() {
-        return "HELLO......";
+        return requestService.getAvailablePlanDatesResponse();
     }
 
     @RequestMapping(value = "/CheckPendingOrders", method = RequestMethod.POST)
     public String CheckPendingOrders() {
-        return "HELLO......";
+        return requestService.getCheckPendingOrdersResponse();
     }
 
     @RequestMapping(value = "/SaveOrder", method = RequestMethod.POST)
     public String SaveOrder() {
-        return "HELLO- Hero ......";
+        return requestService.saveOrderResponse();
     }
 }
