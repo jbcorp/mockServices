@@ -5,6 +5,7 @@ import com.mock.mockServices.services.RequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,8 +22,9 @@ public class RequestController {
         return "HELLO......";
     }
 
-    @RequestMapping(value = "/GetCustomerInformation", method = RequestMethod.POST)
-    public String GetCustomerInformation() {
+    @RequestMapping(value = "/GetCustomerInformation", method = RequestMethod.POST, produces={"application/xml"},
+            consumes={"application/xml"})
+    public @ResponseBody String GetCustomerInformation() {
         return requestService.getCustomerDetailsResponse();
     }
 

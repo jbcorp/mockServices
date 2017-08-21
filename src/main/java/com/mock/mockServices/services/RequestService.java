@@ -15,7 +15,8 @@ public class RequestService  {
     }
 
     public static String getCustomerDetailsResponse() {
-        String response = "<GetCustomerDetailsResponse xmlns='urn:fiber.kpn.com:crm:frontdesk:data:v0' xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'><CustomerNumber>9011590548</CustomerNumber><AccountId>2-RC90O1</AccountId><NameInfo><FirstName>A.S.</FirstName><MiddleName>IT</MiddleName><LastName>MOHANTY</LastName><Initials>A.S.</Initials><Gender>Male</Gender><BirthDate>1997-03-12</BirthDate></NameInfo><Address><Street>Jongkindhoek</Street><HouseNumber>12</HouseNumber><HouseNumberExtension/><ZipCode>8072JT</ZipCode><City>NUNSPEET</City><Country>Netherlands</Country></Address><ContactInfo><TelephoneNumber>0323459999</TelephoneNumber><EmailAddress>asitkumar111@gmail.com</EmailAddress><MailRelevantOffers>false</MailRelevantOffers></ContactInfo><PaymentInfo><BankAccountNumber>NL91ABNA0417164300</BankAccountNumber><BankAccountName/><DirectDebitAgreed>true</DirectDebitAgreed></PaymentInfo><ProductLine>GLAS</ProductLine><Brand>KPN</Brand><ContractInfo><ContractStartDate>2016-03-16</ContractStartDate><ContractEndDate>2017-03-15</ContractEndDate><ContractTerm>P12M</ContractTerm></ContractInfo><BusinessInfo><KvKnumber>92837465</KvKnumber><CompanyName>KPNCOMPANY</CompanyName><CompanyLocation>KPNNETHERLAND</CompanyLocation><CompanyType>20 - Commanditaire vennootschap (CV)</CompanyType><BTWnumber>12345678901234</BTWnumber></BusinessInfo><AccountStatus>Active</AccountStatus><AccountType>Business</AccountType><AccountName>KPNCOMPANY</AccountName><FiberFlag>Y</FiberFlag><LineType>FTTH</LineType><ProvisionedBy>SNI</ProvisionedBy></GetCustomerDetailsResponse>";
+        String response = "";
+
         return wrapSOAPEnvelope(response);
     }
 
